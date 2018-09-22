@@ -1,0 +1,33 @@
+function setup() {
+    createCanvas(400, 400);
+}
+
+var x = 10;
+var changeInX = 3;
+var h = 10;
+var changeInh = 3;
+
+function draw() {
+    background(220);
+
+    ellipse(x, 200, h);
+
+    x = x + changeInX;
+
+    if (x > width) {
+        changeInX = -3;
+    }
+
+    if (x < 0) {
+        changeInX = 3;
+    }
+		 h = h + changeInh;
+	if (h > width) {
+        changeInh = -3;
+    }
+
+    if (h < 0) {
+        changeInh = 3;
+    }
+	
+}
